@@ -17,7 +17,11 @@ namespace TestProject.Controllers
         {
             this.testDBContext = testDBContext;
         }
-
+        [HttpGet("/random")]
+        public String GetString()
+        {
+            return "Pipeline succeeded";
+        }
         [HttpGet]
         public IEnumerable<TestModel> Get()
         {
